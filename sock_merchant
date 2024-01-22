@@ -1,0 +1,15 @@
+def sockMerchant(n, ar):
+    colors = {}
+    color_pairs = 0
+    
+    for sock in ar:
+        colors[sock] = colors.get(sock, 0) + 1
+    
+    
+    for color in colors:
+        if colors[color] >= 2:
+            pairs = colors[color] // 2
+            print(color, pairs)
+            color_pairs += pairs
+            
+    return color_pairs
